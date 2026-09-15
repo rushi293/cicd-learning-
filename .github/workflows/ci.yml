@@ -15,7 +15,7 @@ jobs:
         env:
           ENVIRONMENT: CI
         run: echo "Running in $ENVIRONMENT"
-
+      
       - name: Use secret
         env:
           DEMO_SECRET: ${{ secrets.CI_DEMO_SECRET }}
@@ -23,3 +23,6 @@ jobs:
 
       - name: Run test
         run: ./test.sh
+
+      - name: Build Docker image
+        run: docker build -t cicd-learning:1.0 .
