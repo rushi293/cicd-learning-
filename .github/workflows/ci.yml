@@ -1,16 +1,20 @@
 name: CI
 
-on: 
+on:
   push:
 
-
-jobs: 
+jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code 
+      - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Show environment
+        env:
+          ENVIRONMENT: CI
+        run: echo "Running in $ENVIRONMENT"
 
       - name: Run test
         run: ./test.sh
