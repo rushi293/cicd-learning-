@@ -3,7 +3,7 @@
 output=$(./app.sh)
 
 if echo "$output" | grep -q "Hello From my CI/CD project" &&
-   echo "$output" | grep -q "Hello From RISHHIII"
+   echo "$output" | grep -q "Hello From VSTAUUU"
 then 
    echo "TEST PASSED"
    exit 0
