@@ -12,5 +12,5 @@ jobs:
       - name: Checkout code 
         uses: actions/checkout@v4
 
-      - name: Run application 
-        run: ./app.sh
+      - name: Run test
+        run: ./test.sh
