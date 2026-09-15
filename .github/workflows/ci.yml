@@ -19,7 +19,7 @@ jobs:
       - name: Use secret
         env:
           DEMO_SECRET: ${{ secrets.CI_DEMO_SECRET }}
-        run: echo "Secret is configured: $DEMO_SECRET"
+        run: echo "Secret is configured $DEMO_SECRET"
 
       - name: Run test
         run: ./test.sh
